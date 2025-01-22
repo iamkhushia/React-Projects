@@ -22,7 +22,7 @@ body {
   }
   
   .count {
-    font-size: 3rem;
+    font-size: 50px;
     color: #ee8282;
     margin-bottom: 15px;
   }
@@ -36,9 +36,8 @@ body {
   
   .btn {
     padding: 10px 20px;
-    font-size: 1rem;
-    font-weight: bold;
-    color: #865911;
+    font-size: 15px;
+    color: #d47312;
     background: linear-gradient(45deg, #d75674, #ff4b2b);
     border: none;
     border-radius: 25px;
@@ -59,10 +58,6 @@ body {
     box-shadow: 0 5px 20px rgb(181, 166, 36);
   }
   
-  .increment-btn:active {
-    box-shadow: 0 3px 10px rgba(255, 61, 0, 0.5);
-  }
-  
   .decrement-btn {
     background: linear-gradient(45deg, #fcfbfb, #c4f37a);
     box-shadow: 0 4px 15px rgba(193, 115, 36, 0.75);  
@@ -70,13 +65,12 @@ body {
 
   .decrement-btn:hover{
     box-shadow: 0 5px 20px rgb(181, 166, 36);
-
   }
 
    .decrement-btn:disabled{
     background: linear-gradient(45deg, #fcfbfb, #c4f37a);
     box-shadow: 0 4px 15px rgba(193, 115, 36, 0.75);  
-    color: #454343;
+    color: #463939;
    }
 
   .reset-btn {
@@ -86,9 +80,5 @@ body {
   
   .reset-btn:hover {
     box-shadow: 0 5px 20px rgb(181, 166, 36);
-  }
-  
-  .reset-btn:active {
-    box-shadow: 0 3px 10px rgba(255, 61, 0, 0.5);
   }
   

@@ -28,10 +28,10 @@ function Counter() {
         >
           Decrement
         </button>
-        <button onClick={reset} className="btn reset-btn">Reset</button>
         <button onClick={increment} className="btn increment-btn">
           Increment
         </button>
+        <button onClick={reset} className="btn reset-btn">Reset</button>
       </div>
     </div>
   );
