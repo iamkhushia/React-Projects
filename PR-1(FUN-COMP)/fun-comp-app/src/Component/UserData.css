@@ -1,6 +1,6 @@
 body {
-    background-color: rgb(123, 15, 15);
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: rgb(12, 119, 101);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     margin: 0;
     padding: 20px;
 }
@@ -31,21 +31,21 @@ img {
 }
 
 details {
-    color: rgb(72, 16, 160);
+    color: rgb(42, 7, 128);
 }
 
 details h5 {
     text-align: left;
 }
 
-.user-profile-container {
+.user-data-container {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center; 
  }
 
-.user-profile-card {
+.user-data-card {
     float: left;
     border: 1px solid #ddd;
     border-radius: 8px;
@@ -58,7 +58,7 @@ details h5 {
     margin: 20px;
 } 
 
-.user-profile-card {
+.user-data-card {
     border: 1px solid #ddd;
     border-radius: 8px;
     padding: 16px;
