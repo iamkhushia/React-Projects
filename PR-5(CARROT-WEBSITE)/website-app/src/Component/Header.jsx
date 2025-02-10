@@ -71,9 +71,9 @@ const header = () => {
                     </ul>
                   </li>
                 </ul>
-                <button className="btn search-btn" type="submit">
+                {/* <button className="btn search-btn" type="submit">
                   <img src='https://tse1.mm.bing.net/th?id=OIP.KOftZcLVwA2tVUEuuPhNZwHaHa&pid=Api&P=0&h=180' className="search-logo" />
-                </button>
+                </button> */}
               </form>
             </div>
           </div>
