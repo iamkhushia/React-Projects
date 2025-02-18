@@ -1,0 +1,300 @@
+
+.card{
+    margin-right: 20px;
+    padding: 20px;
+ }
+
+ .card-image{
+    height: 150px;
+    width: 150px;
+}
+
+
+/* Header.css */
+
+.header-section{
+    margin-top: 20px;
+    margin-bottom: 40px;
+    margin-left: 80px;
+    margin-right: 80px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    
+}
+.navbar-custom{
+    background-color: rgb(248, 195, 125);
+    padding: 30px;
+}
+
+.navbar-brand {
+    font-size: 24px;
+    font-weight: bold;
+    color: #094929 !important;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .navbar-brand:hover {
+    color: #923f0e !important;
+  }
+
+
+
+  /* AddBook.css */
+
+.add-book-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1100px;
+    margin-left: 130px;
+    /* height: 100vh; */
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    padding: 50px;
+  }
+  
+  .add-book-form {
+    width: 50%;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    color: white;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+ 
+  
+  .add-book-form h2 {
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #fff;
+  }
+  
+  .add-book-form input,
+  .add-book-form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.2);
+    /* color: white; */
+  }
+  
+  .add-book-form input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+  }
+  
+  .add-book-form button {
+    width: 50%;
+    background: #f72541d2;
+    padding: 12px;
+    margin-left: 150px;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+  }
+  
+  .add-book-form button:hover {
+    background: #ff4757;
+  }
+
+  /* Home.css */
+
+.home-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-left: 50px;
+    margin-right: 50px;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #160f4d, #b8abf7);
+    /* min-height: 100vh; */
+  }
+  
+  .book-card {
+    width: 280px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  .book-card:hover {
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.5);
+  }
+  
+  .book-card img {
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  .card-body {
+    padding: 15px;
+    text-align: center;
+    color: white;
+  }
+  
+  .card-title {
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .card-text {
+    font-size: 18px;
+    opacity: 0.8;
+    margin-bottom: 10px;
+  }
+  
+  .card-buttons {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+  }
+  
+  .card-buttons button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    transition: transform 0.2s ease-in-out, background 0.3s ease-in-out;
+  }
+  
+  .card-buttons button:hover {
+    transform: scale(1.1);
+  }
+  
+  .view-btn {
+    background: #4caf50;
+    color: white;
+  }
+  
+  .edit-btn {
+    background: #ff9800;
+    color: white;
+  }
+  
+  .delete-btn {
+    background: #f44336;
+    color: white;
+  }
+  
+  .view-btn:hover {
+    background: #388e3c;
+  }
+  
+  .edit-btn:hover {
+    background: #e65100;
+  }
+  
+  .delete-btn:hover {
+    background: #d32f2f;
+  } 
+
+  /* ================ */
+
+  .view-section{
+    background: linear-gradient(135deg, #0ab08c, #675f8c);
+    padding: 30px;
+    border-radius: 5px;
+  }
+
+
+/* EditBook.css */
+
+.edit-book-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #584f7f, #675f8c);
+  }
+  
+  .edit-book-form {
+    width: 40rem;
+    padding: 30px;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    color: white;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+  
+  
+  .edit-book-form h2 {
+    text-align: center;
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #ffffff;
+    text-shadow: 0px 0px 8px rgba(255, 255, 255, 0.5);
+  }
+  
+  .form-control,
+  .form-select {
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .form-control:focus,
+  .form-select:focus {
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+  }
+  
+  .form-control::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+  }
+  
+  .submit-btn {
+    width: 50%;
+    border: none;
+    padding: 12px;
+    margin-left: 150px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+  }
+  
+  .submit-btn:hover {
+    background: #e63946;
+  }
+  
+  .cancel-btn {
+    border: none;
+    padding: 12px;
+    margin-left: 350px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+  }
+  
+  
