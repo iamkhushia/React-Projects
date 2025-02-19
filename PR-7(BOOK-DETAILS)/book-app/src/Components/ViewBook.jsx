@@ -20,7 +20,7 @@ const ViewBook = () => {
 
   return (
     <Container className=" view-section d-flex justify-content-center align-items-center mt-5">
-      <Card style={{ width: "25rem", padding: "15px", boxShadow: "0px 4px 10px rgba(0,0,0,0.1)", borderRadius: "10px" }}>
+      <Card style={{ width: "22rem", padding: "15px", boxShadow: "0px 4px 10px rgba(0,0,0,0.1)", borderRadius: "10px" }}>
         <Card.Img variant="top" src={book.book_image} style={{ borderRadius: "10px", height: "200px", objectFit: "cover" }} />
         <Card.Body className="text-center">
           <Card.Title style={{ fontSize: "24px", fontWeight: "bold" }}>{book.book_title}</Card.Title>
