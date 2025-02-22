@@ -18,8 +18,6 @@ function App() {
           <Route path='/add' element={<AddBook />} />
           <Route path='/edit/:id' element={<EditBook />} />
           <Route path="/view/:id" element={<ViewBook />} />
-
-
         </Routes>
 
     
