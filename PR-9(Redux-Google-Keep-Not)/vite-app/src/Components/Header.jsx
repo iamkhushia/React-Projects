@@ -7,8 +7,8 @@ const Header = () => {
       <Container>
         <Navbar.Brand href="/" className="keep-brand">
           <img
-            src="http://localhost:5175/src/assets/Images/google-keep-logo.png"
-            alt="Keep Logo"
+            src="https://tse4.mm.bing.net/th?id=OIP.O_BEi15EGH4F2vCLcTVFwwHaKI&pid=Api&P=0&h=180"
+            // alt="Keep Logo"
             className="keep-logo"
           />
           Google Keep
