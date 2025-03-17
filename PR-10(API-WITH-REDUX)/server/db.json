@@ -3,7 +3,7 @@
     {
       "id": "84362",
       "product_name": "kilos",
-      "product_price": "5650",
+      "product_price": "565",
       "product_description": "a very nice products",
       "product_image": "https://tse1.mm.bing.net/th?id=OIP.3S2QsdyGVAcKkwUqEq1_OQHaE8&pid=Api&rs=1&c=1&qlt=95&w=179&h=119",
       "category": "Grocery"
@@ -31,6 +31,22 @@
       "product_description": "this products is very nice and beatiful..",
       "product_image": "https://tse1.mm.bing.net/th?id=OIP.HliqwcOHQoXZtT5TViCgMwHaFj&pid=Api&rs=1&c=1&qlt=95&w=155&h=116",
       "category": "Cosmetics"
+    },
+    {
+      "id": "12733",
+      "product_name": "home and furniture",
+      "product_price": "32340",
+      "product_description": "a very nice products",
+      "product_image": "https://tse1.mm.bing.net/th?id=OIP.b6CCgICU_to46U6xkJtQdAHaGK&pid=Api&rs=1&c=1&qlt=95&w=135&h=112",
+      "category": "Home & Furniture"
+    },
+    {
+      "id": "36392",
+      "product_name": "footerware",
+      "product_price": "565",
+      "product_description": "this product is very nice..",
+      "product_image": "https://tse1.mm.bing.net/th?id=OIP.RpNUeh6J00ENCBCLXIllBAHaEZ&pid=Api&rs=1&c=1&qlt=95&w=207&h=122",
+      "category": "Footwear"
     }
   ]
 }
