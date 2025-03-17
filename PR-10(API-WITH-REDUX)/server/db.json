@@ -1,0 +1,36 @@
+{
+  "products": [
+    {
+      "id": "84362",
+      "product_name": "kilos",
+      "product_price": "5650",
+      "product_description": "a very nice products",
+      "product_image": "https://tse1.mm.bing.net/th?id=OIP.3S2QsdyGVAcKkwUqEq1_OQHaE8&pid=Api&rs=1&c=1&qlt=95&w=179&h=119",
+      "category": "Grocery"
+    },
+    {
+      "id": "57843",
+      "product_name": "fashion",
+      "product_price": "32340",
+      "product_description": "a very nice cloths for women , men and kids....",
+      "product_image": "https://tse2.mm.bing.net/th?id=OIP.6j2eXBHMnAhDSRHB8wXCEQHaLH&pid=Api&P=0&h=180",
+      "category": "Cloths"
+    },
+    {
+      "id": "46334",
+      "product_name": "Electronics",
+      "product_price": "24233",
+      "product_description": "This mobile is very diffrient and unique",
+      "product_image": "https://tse1.mm.bing.net/th?id=OIP.yBkcswIntp3sqAw4MYCjfQHaHU&pid=Api&rs=1&c=1&qlt=95&w=113&h=112",
+      "category": "Mobile"
+    },
+    {
+      "id": "77987",
+      "product_name": "beatuy",
+      "product_price": "345",
+      "product_description": "this products is very nice and beatiful..",
+      "product_image": "https://tse1.mm.bing.net/th?id=OIP.HliqwcOHQoXZtT5TViCgMwHaFj&pid=Api&rs=1&c=1&qlt=95&w=155&h=116",
+      "category": "Cosmetics"
+    }
+  ]
+}
