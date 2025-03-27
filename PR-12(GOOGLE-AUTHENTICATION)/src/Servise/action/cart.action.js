@@ -17,24 +17,6 @@ export const clearCart = () => ({
     type: "CLEAR_CART",
 });
 
-// export const placeOrder = (cartItems, totalAmount) => {
-//     return async (dispatch) => {
-//         try {
-//             const orderData = {
-//                 items: cartItems,
-//                 totalAmount,
-//                 orderDate: new Date().toISOString(),
-//             };
-
-//             await addDoc(collection(db, "orders"), orderData);
-//             dispatch({ type: "CLEAR_CART" });
-//             alert("✅ Order Placed Successfully!");
-//         } catch (error) {
-//             console.error("Error placing order:", error);
-//             alert("❌ Error placing order! Please try again.");
-//         }
-//     };
-// };
 
 export const placeOrder = (cartItems, totalAmount, setOrderSuccess) => {
     return async (dispatch) => {
@@ -49,7 +31,6 @@ export const placeOrder = (cartItems, totalAmount, setOrderSuccess) => {
 
             dispatch({ type: "CLEAR_CART" });
 
-            // Set success message to state
             setOrderSuccess(true);
         } catch (error) {
             console.error("Error placing order:", error);

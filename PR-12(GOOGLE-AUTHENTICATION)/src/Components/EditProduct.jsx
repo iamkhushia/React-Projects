@@ -31,13 +31,6 @@ const EditProduct = () => {
         dispatch(updateProductAsync(id, inputData));
     };
 
-    
-    // useEffect(() => {
-    //     console.log("isUpdated Changed:", isUpdated);  
-    //     if (isUpdated) {
-    //         navigate("/");
-    //     }
-    // }, [isUpdated,navigate]);
 
     useEffect(() => {
         console.log("isUpdated Changed:", isUpdated);

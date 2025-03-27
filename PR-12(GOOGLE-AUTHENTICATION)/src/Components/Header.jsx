@@ -74,11 +74,6 @@ const Header = () => {
                         {user ? <Button onClick={handleLogout}>LogOut</Button> : <Button onClick={handleLogin} >Login ▼</Button>}
 
                     </div>
-                    {/* <div className="option">
-                        <FaShoppingCart />
-                        <span>Cart</span>
-                    </div> */}
-                    {/* <Link to="/cart" className="ms-3"><FaShoppingCart />Cart</Link> */}
 
                     <div className="option cart-btn">
                         <Link to="/cart" className="cart-link">
