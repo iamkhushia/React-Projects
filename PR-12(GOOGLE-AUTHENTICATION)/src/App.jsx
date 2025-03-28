@@ -13,14 +13,15 @@ import Login from "./Components/Login";
 import Cart from "./Components/Cart";
 import OrderHistory from "./Components/OrderHistory";
 import { onAuthStateChanged } from "firebase/auth";
-import { auth } from "./FirebaseConfig";
 import { useDispatch } from "react-redux";
 import { loginSuc } from "./Servise/action/auth.action";
 import Categories from "./Components/Categories";
+import { auth } from "./FirebaseConfig";
+import { fetchCartFromFirebase } from "./Servise/action/cart.action";
 
 function App() {
   const dispatch = useDispatch();
-  const [loading, setLoading] = useState(true); 
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
@@ -32,8 +33,12 @@ function App() {
             id: user.uid,
           })
         );
+        dispatch(fetchCartFromFirebase(user.uid)); 
+      }else{
+        dispatch({ type: "FETCH_CART", payload: [] });
+
       }
-      setLoading(false); 
+      setLoading(false);
     });
 
     return () => unsubscribe();

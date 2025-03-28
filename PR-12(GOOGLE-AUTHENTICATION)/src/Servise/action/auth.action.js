@@ -92,3 +92,14 @@ export const logOutAsync = () => {
         }
     }
 }
+
+export const logoutUser = () => async (dispatch) => {
+    try {
+      await signOut(auth);
+  
+      // 👇 Cart Clear NAHI Karna after Logout
+      dispatch({ type: "LOGOUT_SUCCESS" });
+    } catch (error) {
+      console.error("Error during logout:", error);
+    }
+  };

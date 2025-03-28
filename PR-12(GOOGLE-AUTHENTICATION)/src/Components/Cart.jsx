@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
-import {Button,Container,Table,Alert,Spinner,ButtonGroup,} from "react-bootstrap";
-import {removeFromCart,placeOrder,increaseQuantity,decreaseQuantity,} from "../Servise/action/cart.action";
+import { Button, Container, Table, Alert, Spinner, ButtonGroup, } from "react-bootstrap";
+import { removeFromCart, increaseQuantity, decreaseQuantity, } from "../Servise/action/cart.action";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 
@@ -10,7 +10,7 @@ const Cart = () => {
     const { cartItems } = useSelector((state) => state.cartReducer);
 
     const [orderSuccess, setOrderSuccess] = useState(null);
-    const [loading, setLoading] = useState(false); 
+    const [loading, setLoading] = useState(false);
 
     const totalAmount = cartItems.reduce(
         (sum, item) => sum + Number(item.product_price) * item.quantity,
@@ -18,9 +18,13 @@ const Cart = () => {
     );
 
     const handlePlaceOrder = async () => {
-        setLoading(true); 
+        setLoading(true);
         await dispatch(placeOrder(cartItems, totalAmount, setOrderSuccess));
-        setLoading(false); 
+        setLoading(false);
+        if (orderSuccess) {
+            await dispatch(clearCartAfterOrder(auth.currentUser?.uid));
+        }
+        setLoading(false);
     };
 
     return (
@@ -57,7 +61,7 @@ const Cart = () => {
                                     <img
                                         src={
                                             item.product_image ||
-                                            "https://via.placeholder.com/100" 
+                                            "https://via.placeholder.com/100"
                                         }
                                         alt={item.product_name}
                                         style={{
@@ -135,7 +139,7 @@ const Cart = () => {
                         variant="success"
                         className="me-2"
                         onClick={handlePlaceOrder}
-                        disabled={loading} 
+                        disabled={loading}
                     >
                         {loading ? (
                             <>
@@ -163,3 +167,5 @@ const Cart = () => {
 };
 
 export default Cart;
+
+
