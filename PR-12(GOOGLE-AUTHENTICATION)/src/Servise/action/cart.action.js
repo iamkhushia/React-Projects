@@ -121,4 +121,35 @@ import { auth, db } from "../../FirebaseConfig";
       type: "CLEAR_CART",
     });
   };
+
+  const orderRef = collection(db, "orders");
+
+export const placeOrder = (cartItems, totalAmount, setOrderSuccess) => async (dispatch) => {
+  try {
+    const user = auth.currentUser;
+    if (!user) {
+      console.error("User not authenticated!");
+      setOrderSuccess(false);
+      return;
+    }
+
+    const orderData = {
+      userId: user.uid,
+      items: cartItems,
+      totalAmount,
+      createdAt: new Date().toISOString(),
+    };
+
+    await addDoc(orderRef, orderData); // ✅ Order Firebase me Save Karna
+
+    // 🔥 Order ke baad Cart ko clear karna
+    dispatch(clearCartAfterOrder(user.uid));
+
+    setOrderSuccess(true);
+  } catch (error) {
+    console.error("Error placing order:", error);
+    setOrderSuccess(false);
+  }
+};
+
   

@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import { Button, Container, Table, Alert, Spinner, ButtonGroup, } from "react-bootstrap";
-import { removeFromCart, increaseQuantity, decreaseQuantity, } from "../Servise/action/cart.action";
+import { removeFromCart, increaseQuantity, decreaseQuantity, clearCartAfterOrder, placeOrder, } from "../Servise/action/cart.action";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 
@@ -24,7 +24,7 @@ const Cart = () => {
         if (orderSuccess) {
             await dispatch(clearCartAfterOrder(auth.currentUser?.uid));
         }
-        setLoading(false);
+        setLoading(false);  
     };
 
     return (
