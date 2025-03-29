@@ -23,28 +23,7 @@ import { auth, db } from "../../FirebaseConfig";
     }
   };
   
-  // export const addToCart = (product) => async (dispatch, getState) => {
-  //   const user = auth.currentUser;
-  //   if (!user) return;
   
-  //   const cartItems = getState().cartReducer.cartItems;
-  //   const existingItem = cartItems.find((item) => item.id === product.id);
-  
-  //   if (existingItem) {
-  //     dispatch(increaseQuantity(product.id));
-  //   } else {
-  //     const newCartItem = { ...product, quantity: 1, userId: user.uid };
-  //     const docRef = doc(cartRef, `${user.uid}_${product.id}`);
-  //     await setDoc(docRef, newCartItem);
-  
-  //     dispatch({
-  //       type: "ADD_TO_CART",
-  //       payload: { id: `${user.uid}_${product.id}`, ...newCartItem },
-  //     });
-  //   }
-  // };
-  
-
   export const addToCart = (product) => async (dispatch, getState) => {
     const user = auth.currentUser;
     if (!user) {
