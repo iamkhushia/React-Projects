@@ -1,6 +1,6 @@
 
 
-import {collection,addDoc,getDocs,query,where,deleteDoc,doc,updateDoc,setDoc, getDoc,} from "firebase/firestore";
+import {collection,addDoc,getDocs,query,where,deleteDoc,doc,setDoc, updateDoc, getDoc,} from "firebase/firestore";
 import { auth, db } from "../../FirebaseConfig";
   
   const cartRef = collection(db, "cart");
@@ -79,6 +79,7 @@ import { auth, db } from "../../FirebaseConfig";
     if (!user) return;
   
     const itemRef = doc(db, "cart", id);
+    // const itemRef = doc(db, "cart", `${user.uid}_${id}`);
     await deleteDoc(itemRef);
   
     dispatch({
@@ -87,49 +88,6 @@ import { auth, db } from "../../FirebaseConfig";
     });
   };
   
-  // export const increaseQuantity = (id) => async (dispatch, getState) => {
-  //   const user = auth.currentUser;
-  //   if (!user) return;
-  
-  //   const cartItems = getState().cartReducer.cartItems;
-  //   const item = cartItems.find((item) => item.id === id);
-  
-  //   if (item) {
-  //     const itemRef = doc(db, "cart", id);
-  //     await updateDoc(itemRef, {
-  //       quantity: item.quantity + 1,
-  //     });
-  
-  //     dispatch({
-  //       type: "INCREASE_QUANTITY",
-  //       payload: id,
-  //     });
-  //   }
-  // };
-  
-
-
-  // export const decreaseQuantity = (id) => async (dispatch, getState) => {
-  //   const user = auth.currentUser;
-  //   if (!user) return;
-  
-  //   const cartItems = getState().cartReducer.cartItems;
-  //   const item = cartItems.find((item) => item.id === id);
-  
-  //   if (item && item.quantity > 1) {
-  //     const itemRef = doc(db, "cart", id);
-  //     await updateDoc(itemRef, {
-  //       quantity: item.quantity - 1,
-  //     });
-  
-  //     dispatch({
-  //       type: "DECREASE_QUANTITY",
-  //       payload: id,
-  //     });
-  //   }
-  // };
-  
-
   export const increaseQuantity = (id) => async (dispatch, getState) => {
     const user = auth.currentUser;
     if (!user) {
@@ -166,7 +124,7 @@ import { auth, db } from "../../FirebaseConfig";
       console.error("❗️ Item not found in Redux!");
     }
   };
-
+  
   export const decreaseQuantity = (id) => async (dispatch, getState) => {
     const user = auth.currentUser;
     if (!user) {
@@ -269,5 +227,3 @@ export const placeOrder = (cartItems, totalAmount, setOrderSuccess) => async (di
 };
 
   
-
-
