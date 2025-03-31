@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useNavigate, useParams } from "react-router";
 import { Button, Col, Container, Form, Row } from "react-bootstrap";
 import { getProductAsync, updateProductAsync } from "../Servise/action/product.action";
+import uploadImage from "../Servise/imageUpload";
 
 const EditProduct = () => {
     const { id } = useParams();
@@ -52,6 +53,18 @@ const EditProduct = () => {
         }
     }, [product]);
 
+    const handleImage = async(e) => {
+        let file = e.target.files[0];
+        // console.log(file)
+        if(!file)   
+            return;
+        let url = await uploadImage(file)
+        setInputData({
+            ...inputData,
+            product_image: `${url}`
+        })
+    }
+
     return (
         <Container className="mt-3 edit-container">
             <h2 className="mb-4 edit-data">Edit Product</h2>
@@ -84,11 +97,13 @@ const EditProduct = () => {
                 </Form.Group>
 
                 <Form.Group as={Row} className="mb-3">
-                    <Form.Label column sm="2">Product Image</Form.Label>
-                    <Col sm="6">
-                        <Form.Control type="text" name="product_image" value={inputData.product_image} onChange={handleChanged} placeholder="Enter Image URL" />
-                    </Col>
-                </Form.Group>
+                        <Form.Label column sm="2">
+                             product_Image
+                        </Form.Label>
+                        <Col sm="4">
+                            <Form.Control type="file" name="product_image"  onChange={handleImage} />
+                        </Col>
+                    </Form.Group>
 
                 <Form.Group as={Row} className="mb-3">
                     <Form.Label column sm="2">Category</Form.Label>
